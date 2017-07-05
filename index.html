@@ -1,0 +1,624 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<link rel="stylesheet" type="text/css" href="css/css.css"/>
+<link rel="stylesheet" type="text/css" href="css/public.css"/>
+<style>
+@font-face {
+  font-family: 'iconfont';
+  src: url('font/iconfont.eot');
+  src: url('font/iconfont.eot?#iefix') format('embedded-opentype'),
+  url('font/iconfont.woff') format('woff'),
+  url('font/iconfont.ttf') format('truetype'),
+  url('font/iconfont.svg#iconfont') format('svg');
+}
+.iconfont{
+  font-family:"iconfont" !important;
+  font-size:16px;font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}        
+        #container {
+            position: relative;
+            width: 1397px;
+            height: 411px;
+            
+            overflow: hidden;
+			left:10px;
+			z-index:20;
+        }
+        
+        #list {
+            position: absolute;
+            z-index: 1;
+            width: 9779px;
+            height: 411px;
+        }
+        
+        #list img {
+            float: left;
+            width: 1397px;
+            height: 411px;
+        }
+        
+        #buttons {
+            position: absolute;
+            left: 1250px;
+            bottom: 20px;
+            z-index: 2;
+            height: 10px;
+            width: 100px;
+        }
+        
+        #buttons span {
+            float: left;
+            margin-right: 5px;
+            width: 10px;
+            height: 10px;
+            border: 1px solid #fff;
+            border-radius: 50%;
+            background: #333;
+            cursor: pointer;
+        }
+        
+        #buttons .on {
+            background: orangered;
+        }
+        
+        .arrow {
+            position: absolute;
+            top: 180px;
+            z-index: 2;
+            display: none;
+            width: 40px;
+            height: 40px;
+            font-size: 36px;
+            font-weight: bold;
+            line-height: 39px;
+            text-align: center;
+            color: #fff;
+            background-color: RGBA(0, 0, 0, .3);
+            cursor: pointer;
+        }
+        
+        .arrow:hover {
+            background-color: RGBA(0, 0, 0, .7);
+        }
+        
+        #container:hover .arrow {
+            display: block;
+        }
+        
+        #prev {
+            left: 20px;
+        }
+        
+        #next {
+            right: 20px;
+        } 
+</style>
+</head>
+
+<body>
+<!----------------header---------------->
+<header>
+	<div id="a1">
+    	<span><i class="iconfont">&#xe501;</i></span>
+       	<div class="a3"><a>希思黎会员</a></div>
+    	<ul class="a2">
+        	<li><a href="#"><i class="iconfont">&#xe604;</i> 订阅电子邮件</a></li>
+            <li><a href="#">专柜导航</a></li>
+            <li><a href="#">激活线下会员</a></li>
+            <li><a href="#">客服咨询热线</a></li>
+        </ul>
+        <input type="search" placeholder="全能乳液"/>
+        <a href="#"><img src="images/fangdajing.png"/></a>
+    </div> 
+</header>
+<!----------------main------------------------------------------------------------>
+<script>
+	function test1(){
+		$("dengzhu").style.display="block";
+		$("zhezc").style.display="block";
+		}
+</script>
+
+<main>
+	<div id="logolan">
+    	<span class="logo"><img src="images/logo.png"/></span>
+        <span class="dengzhu"><a href="#" id="dlbtn" onClick="test1()">登录 &nbsp; | &nbsp; 注册</a></span>
+        <span class="gouwulan"><a href="#"><i class="iconfont">&#xe60d;</i>你的购物篮￥:0.00</a></span>
+    </div>
+</main>
+
+<!----------------登录注册弹窗-------------------------------------------------->
+<script>
+	function test2(){
+			$("dengzhu").style.display="none";
+			$("zhezc").style.display="none";
+		}
+</script>
+<div class="dengluzhuce" id="dengzhu">
+	<fieldset>
+	<legend>
+    	<a href="#"  onClick="test2()"><i class="iconfont">&#xe664;</i></a><br>
+    关闭 </legend>
+    <span class="mingcheng">你的账户</span>
+    <ul>
+    	<li>注册会员</li>
+    	<li><p>邮件</p><input type="email" class="youjian"/></li>
+        <li><p>电话</p><input type="text" class="dianhua"/><input type="button" value="发送验证码" class="fasong"></li>
+        <li><p>验证码</p><input type="text" class="yanzheng"/></li>
+        <li>*为必填内容</li>
+        <li><input type="button" class="xiaye" value="下一页"/></li>
+    </ul>
+    <ul>
+    	<li>注册会员</li>
+    	<li><p>邮件</p><input type="email" class="youjian"/></li>
+        <li><p>密码</p><input type="password" class="youjian"/></li>
+        <li><a href="#">忘记你的密码？</a></li>
+        <li>*为必填内容</li>
+        <li><input type="button" class="xiaye" value="登录"/></li>
+    </ul>
+    <span class="gg1">
+    	<h2>注册法国希思黎官网</h2>
+        <p>为您记录在线购买的产品</p>
+        <p>为您追踪订单进度</p>
+        <p>为您制定专享护肤方案。</p>
+        <p>为您更新最新品牌动态，专享活动。</p>
+    </span>
+</div>
+ <span id="zhezc" onClick="test2()"></span>
+<!----------------nav--------------------------------------------------->
+<nav>
+	<div id="caidan">
+	<ul class="caidan_yiji">
+    	<li><a href="#">护肤</a>
+        	<div class="caidan_erdiv">
+                <ul>
+                    <li><a href="#">面部</a>
+                    	<p><a href="#">最新动态</a></p>
+                        <p><a href="#">卸妆</a></p>
+                        <p><a href="#">洁面</a></p>
+                        <p><a href="#">化妆水</a></p>
+                        <p><a href="#">精华</a></p>
+                        <p><a href="#">乳液</a></p>
+                        <p><a href="#">面霜</a></p>
+                        <p><a href="#">面膜</a></p>
+                        <p><a href="#">眼唇</a></p>
+                        <p><a href="#">去角质</a></p>
+                        <p><a href="#">御龄护理</a></p>
+                        <p><a href="#">美白护理</a></p>
+                        <p><a href="#">保湿护理</a></p>
+                        <p><a href="#">控油护理</a></p>
+                        <p><a href="#">全线产品</a></p>
+                    </li>
+                    <li><a href="#">身体护理</a>
+                    	<p><a href="#">最新动态</a></p>
+                        <p><a href="#">保湿滋润</a></p>
+                        <p><a href="#">去除角质</a></p>
+                        <p><a href="#">塑身纤体</a></p>
+                        <p><a href="#">紧致肌肤</a></p>
+                        <p><a href="#">手部护理</a></p>
+                        <p><a href="#">秀发护理</a></p>
+                        <p><a href="#">全线产品</a></p>    
+                    </li>
+                    <li><a href="#">防晒</a>
+                    	<p><a href="#">最新动态</a></p>
+                        <p><a href="#">面部防晒</a></p>
+                        <p><a href="#">身体防晒</a></p>
+                        <p><a href="#">晒后护理</a></p>
+                        <p><a href="#">全线产品</a></p>                
+                    </li>
+                    <li><a href="#">肌肤问题</a>
+                    	<p><a href="#">抗皱玉玲</a></p>
+                        <p><a href="#">紧致提拉</a></p>
+                        <p><a href="#">亮泽美白</a></p>
+                        <p><a href="#">干燥缺水</a></p>
+                        <p><a href="#">敏感舒缓</a></p>
+                        <p><a href="#">控油调理</a></p>
+                        <p><a href="#">全线产品</a></p>
+ 				    </li>
+                    <li>
+                    	<div class="lastimg">
+                        	
+                        	<span class="waiborder">
+                            	<p><a href="#" style="margin:0; text-align:center;font-size:16px;color:#000;">抗皱修活御致臻颜霜</a></p>
+                    			<a href="#"><img src="images/__banner_1.jpg"></a>
+                            	<p style="margin:0;"><a href="#" style="margin:0; text-align:center;color:#000;">即刻前往> </a></p>
+                            <span>
+                            
+                    	</div>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li><a href="#">彩妆</a>
+        	<div class="caidan_erdiv">
+                <ul>
+                    <li><a href="#">脸部彩妆</a>
+  				      	<p><a href="#">最新动态</a></p>
+                        <p><a href="#">隔离底霜</a></p>
+                        <p><a href="#">粉底</a></p>
+                        <p><a href="#">粉饼</a></p>
+                        <p><a href="#">蜜粉</a></p>
+                        <p><a href="#">腮红修容</a></p>
+                        <p><a href="#">全线产品</a></p>
+                    </li>
+                    <li><a href="#">眼部彩妆</a>
+                    	<p><a href="#">最新动态</a></p>
+			            <p><a href="#">遮瑕</a></p>
+                        <p><a href="#">眉笔</a></p>
+                        <p><a href="#">眼线</a></p>
+                        <p><a href="#">眼影</a></p>
+                        <p><a href="#">睫毛膏</a></p>
+                        <p><a href="#">全线产品</a></p>
+                    </li>
+                    <li><a href="#">唇部</a>
+                    	<p><a href="#">最新动态</a></p>
+                        <p><a href="#">唇线</a></p>
+                        <p><a href="#">唇膏</a></p>
+                        <p><a href="#">唇蜜</a></p>
+                        <p><a href="#">全线产品</a></p>            
+                    </li>
+                    <li><a href="#">彩妆问题</a>
+                    	<p><a href="#">遮盖黑眼圈与瑕疵</a></p>
+                        <p><a href="#">均匀肤色</a></p>
+                        <p><a href="#">控油持妆</a></p>
+                        <p><a href="#">细致立体妆容</a></p>
+                        <p><a href="#">丰盈双唇</a></p>
+                        <p><a href="#">全线产品</a></p>
+ 				    </li>
+                    <li>
+                    	<div class="lastimg">
+                        	
+                        	<span class="waiborder">
+                            	<p><a href="#" style="margin:0; text-align:center;font-size:16px;color:#000;">轻柔粉底液</a></p>
+                    			<a href="#"><img src="images/_banner__5.jpg"></a>
+                            	<p style="margin:0;"><a href="#" style="margin:0; text-align:center;color:#000;">即刻前往> </a></p>
+                            <span>
+                            
+                    	</div>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li><a href="#">香氛</a>
+        <div class="caidan_erdiv">
+                <ul>
+                    <li><a href="#">脸部彩妆</a>
+  				      	<p><a href="#">夜幽情怀</a></p>
+                        <p><a href="#">缘月</a></p>
+                        <p><a href="#">沁香水</a></p>
+                        <p><a href="#">热带奇幻香氛</a></p>
+                        <p><a href="#">全线产品</a></p>
+                    </li>
+                    <li><a href="#">眼部彩妆</a>
+                    	<p><a href="#">绿野芳踪</a></p>
+                        <p><a href="#">全线产品</a></p>
+                    </li>
+                    <li><a href="#">唇部</a>
+                    	<p><a href="#">王者之跃</a></p>                        
+                        <p><a href="#">全线产品</a></p>            
+                    </li>
+                    <li><a href="#"></a>
+                    	<p><a href="#"></a></p>
+ 				    </li>
+                    <li>
+                    	<div class="lastimg">
+                        	
+                        	<span class="waiborder">
+                            	<p><a href="#" style="margin:0; text-align:center;font-size:16px;color:#000;">夜幽情怀香水</a></p>
+                    			<a href="#"><img src="images/_banner_a.jpg"></a>
+                            	<p style="margin:0;"><a href="#" style="margin:0; text-align:center;color:#000;">即刻前往> </a></p>
+                            <span>
+                            
+                    	</div>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li><a href="#">男士</a>
+        	<div class="caidan_erdiv">
+                <ul>          
+                    <li><a href="#">脸部保养</a>
+  				      	<p><a href="#">舒缓护理</a></p>
+                        <p><a href="#">净化护理</a></p>                       
+                        <p><a href="#">全线产品</a></p>
+                    </li>
+                    <li><a href="#"></a>
+                    	<p><a href="#"></a></p>
+                        <p><a href="#"></a></p>
+                    </li>
+                    <li><a href="#"></a>
+                    	<p><a href="#"></a></p>                        
+                        <p><a href="#"></a></p>            
+                    </li>
+                    <li><a href="#"></a>
+                    	<p><a href="#"></a></p>
+ 				    </li>
+                    <li>
+                    	<div class="lastimg">
+                        	<span class="waiborder">
+                            	<p><a href="#" style="margin:0; text-align:center;font-size:16px;color:#000;">男士抗皱润肤乳液</a></p>
+                    			<a href="#"><img src="images/vignette_sisleyum.jpg"></a>
+                            	<p style="margin:0;"><a href="#" style="margin:0; text-align:center;color:#000;">即刻前往> </a></p>
+                            <span>
+                            
+                    	</div>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li><a href="#">官网专属</a></li>
+        <li><a href="#">美妍建议</a></li>
+        <li><a href="#">希思黎</a></li>
+        <li><a href="#">至臻坊</a></li>
+        <li><a href="#">美丽订阅</a></li>
+    </ul>
+    </div>
+</nav>
+<!----------------banner---------------->
+	<script src="js/myevent.js"></script>
+	<script src="js/mytools.js"></script>
+    <script src="js/move.js"></script>
+<script>
+	let timer=null;
+	window.onload = function() {
+		let list = $('list');
+		let prev = $('prev');
+		let next = $('next');
+		let spans = $('buttons').getElementsByTagName("span");
+		let index=0;		
+		prev.onclick=function(){
+			if(list.offsetLeft==0){
+				list.style.left="-6985px";
+			}
+			index--;
+			if(index<0){
+				index=4;
+			}
+			for(let i=0;i<spans.length;i++){
+				spans[i].className="";
+			}
+			spans[index].className="on";
+			move4(list,list.offsetLeft+1397,"left");			
+		};
+		next.onclick=function(){
+			if(list.offsetLeft==-8202){
+				list.style.left="-1397px";
+			}
+			index++;
+			if(index>4){
+				index=0;
+			}
+			for(let i=0;i<spans.length;i++){
+				spans[i].className="";
+			}
+			spans[index].className="on";
+			move4(list,list.offsetLeft+1397,"left");			
+			move4(list,list.offsetLeft-1397,"left");			
+		};
+	};
+	
+</script>
+ 
+<div id="container">
+        <div id="list" style="left: -1397px;">
+            <img src="images/banner-5.jpg" alt="1" />
+            <img src="images/banner-1_.jpg" alt="1" />
+            <img src="images/banner-2.jpg" alt="2" />
+            <img src="images/banner-3.jpg" alt="3" />
+            <img src="images/banner-4.jpg" alt="4" />
+            <img src="images/banner-5.jpg" alt="5" />
+            <img src="images/banner-1_.jpg" alt="5" />
+         </div>
+        <div id="buttons">
+            <span index="1" class="on"></span>
+            <span index="2"></span>
+            <span index="3"></span>
+            <span index="4"></span>
+            <span index="5"></span>
+        </div>
+        <a href="javascript:;" id="prev" class="arrow">&lt;</a>
+        <a href="javascript:;" id="next" class="arrow">&gt;</a>
+</div>
+<!----------------finger---------------->
+<finger>
+	<div class="finger_box">
+    	<span class="finger_tu"><img src="images/227x159_06v2.jpg"/></span>
+        <p>Sisley品牌节盛典</p>
+        <p>6.19-6.28</p>
+        <span class="finger_button">了解详情</span>
+    </div>
+    <div class="finger_box">
+    	<span class="finger_tu"><img src="images/227x159_top.jpg"/></span>
+        <p>植萃呵护 彩妆护肤</p>
+        <p>6.19-6.28</p>
+        <span class="finger_button">了解详情</span>
+    </div>
+    <div class="finger_box">
+    	<span class="finger_tu"><img src="images/_Banner(1).jpg"/></span>
+        <p>Sisley品牌节盛典</p>
+        <p>6.19-6.28</p>
+        <span class="finger_button">了解详情</span>
+    </div>
+    <div class="finger_box">
+    	<span class="finger_tu"><img src="images/_Banner.jpg"/></span>
+        <p>Sisley品牌节盛典</p>
+        <p>6.19-6.28</p>
+        <span class="finger_button">了解详情</span>
+    </div>
+</finger>
+<!----------------aside---------------->
+<aside>
+	<div class="aside_heng">
+    <fieldset  style="border-left:0; border-right:0;border-bottom:0;border-top:1px solid #666;" >
+	<legend> 畅 销 榜 单 </legend>
+    </div>
+</aside>
+<!----------------section---------------->
+<section>
+	<div id="section_box">
+    	<div class="section_div">
+        	<img src="images/3473311540508_4.jpg"/>
+            <p>全能乳液</p>
+            <p>平衡养护</p>
+            <p>￥998.00</p>
+            <span class="finger_button">了解详情</span>
+        </div>
+        <div class="section_div">
+        	<img src="images/3473311506009_4-min.jpg"/>
+            <p>全能乳液</p>
+            <p>平衡养护</p>
+            <p>￥998.00</p>
+            <span class="finger_button">了解详情</span>
+        </div>
+        <div class="section_div">
+        	<img src="images/200x250.jpg"/>
+            <p>全能乳液</p>
+            <p>平衡养护</p>
+            <p>￥998.00</p>
+            <span class="finger_button">了解详情</span>
+        </div>
+        <div class="section_div">
+        	<img src="images/200x250_laa_2_.jpg"/>
+            <p>全能乳液</p>
+            <p>平衡养护</p>
+            <p>￥998.00</p>
+            <span class="finger_button">了解详情</span>
+        </div>
+    </div>
+</section>
+<!----------------aside---------------->
+<aside>
+	<div class="aside_heng">
+    <fieldset  style="border-left:0; border-right:0;border-bottom:0;border-top:1px solid #666;" >
+	<legend> 最 新 资 讯 </legend>
+    </div>
+</aside>
+<!----------------section---------------->
+<section>
+	<div id="section_box">
+    	<div class="section_div">
+        	<img src="images/0727_black_200x250_1.png"/>
+            <p>全能乳液</p>
+            <p>平衡养护</p>
+            <p>￥998.00</p>
+            <span class="finger_button">了解详情</span>
+        </div>
+        <div class="section_div">
+        	<img src="images/3473311320001_4-min.jpg"/>
+            <p>全能乳液</p>
+            <p>平衡养护</p>
+            <p>￥998.00</p>
+            <span class="finger_button">了解详情</span>
+        </div>
+        <div class="section_div">
+        	<img src="images/3473311510006_4-min.jpg"/>
+            <p>全能乳液</p>
+            <p>平衡养护</p>
+            <p>￥998.00</p>
+            <span class="finger_button">了解详情</span>
+        </div>
+        <div class="section_div">
+        	<img src="images/400x400_1_21[1].png"/>
+            <p>全能乳液</p>
+            <p>平衡养护</p>
+            <p>￥998.00</p>
+            <span class="finger_button">了解详情</span>
+        </div>
+    </div>
+</section>
+<!----------------figcpation---------------->
+
+<figcaption>
+	<div id="fgt_box">
+    	<span class="fgt_bg1">
+        	<span>研究与革新</span>
+            <p>精益求精的卓越品质</p>
+        </span>
+        <span class="fgt_bg2">
+        	<span>植物美容学</span>
+            <p>精益求精的卓越品质精益求精的卓越品质精益求精的卓越品质精益求精的卓越品质精益求精的卓越品</p>
+        </span>
+    </div>
+</figcaption>
+<!----------------footer---------------->
+
+<footer>
+	<div id="footer_div1">
+    	<ul>
+        	<li><img src="images/bw_flower_picto[1].png"/>满意退款</li>
+            <li><i class="iconfont">&#xe60a;</i><br>安全支付</li>
+            <li><i class="iconfont">&#xe62a;</i><br>发货</li>
+            <li><i class="iconfont">&#xe70d;</i><br>退换货条款</li>
+            <li><i class="iconfont">&#xe600;</i><br>试用</li>
+            <li><i class="iconfont">&#xe636;</i><br>礼盒</li>
+        </ul>
+    </div>
+    <div id="footer_div2">
+    	<ul>
+  		 	<li><b>我们的服务</b></li>
+            <li>专柜导航</li>
+            <li>希思黎会员</li>
+            <li>官网专享</li>
+            <li>个性化小样</li>
+            <li>礼品定制</li>
+            <li>手机商城</li>          
+        </ul>
+        <ul>
+        	<li><b>需要帮助</b></li>
+            <li>常见问题</li>
+            <li>网站地图</li>
+            <li>联系表</li>
+            <li>忘记密码</li>                 
+        </ul>
+        <ul>
+        	<li><b>有用信息</b></li>
+            <li>条款和条件</li>
+            <li>法律声明</li>
+            <li>隐私条款</li>          
+        </ul>
+        <div class="div2_div1">
+        	<span class="div2_div1_span">
+            	<p>客服咨询热线</p>
+                <p>400 821 1280</p>
+                <p>周一到周五：9:00-21:00</p>
+                <p>周六：9:00-18:00</p>
+                <p>法定节假日除外</p>
+            </span>
+            <div class="div2_div2">
+        	<span>关注我们<br><a href="#"><i class="iconfont">&#xe62b;&#xe607;</i></a><br></span>
+            <span>国家<br>
+            	<select>
+                	<option>中文</option>
+                    <option>中文</option>
+                    <option>中文</option>
+                    <option>中文</option>
+                    <option>中文</option>
+                </select>
+            </span>
+        	</div>
+        	<div class="div2_div3">
+            	<p>接受我们的独家优惠和美容建议</p>
+                <input type="text" placeholder="您的邮件"/>
+            </div>
+            <div class="div2_div4">
+            	<input type="button" value="OK">
+            </div>
+        </div>
+    </div>
+    <div class="aside_heng">
+    <fieldset  style="border-left:0; border-right:0;border-bottom:0;border-top:1px solid #666;" >
+	<legend><img src="images/bw_flower_picto[1].png"> </legend>
+    </div>
+    <p class="p1">咨询热线：400-821-1280（周一到周五：9:00-21:00 周六：9:00-18:00 国定节假日除外） 沪ICP备09011489号-15 <img src="images/shgsLogo.gif"/></p>
+    <p class="p2">希思黎（上海）化妆品商贸有限公司 地址：上海市静安区南京西路1539号静安嘉里中心办公楼二座38、39层3801-3805、3903-3904室 电话：021-52031111</p>
+</footer>
+	
+</body>
+</html>
