@@ -1,0 +1,11 @@
+@charset "utf-8";
+/* CSS Document */
+body,h1,h2,h3,h4,h5,h6,a,p,input,img,ul,ol,li,dl,dd,dt,figure,figcaption{ padding:0; margin:0;}
+body{ font:12px/1.5 "微软雅黑";  background:#F6F6F6}
+img{ border:0; display:block;}
+input,textarea{ outline:none;}
+*{ box-sizing:border-box;}
+ol,ul{ list-style:none;}
+nav,footer,header,main,aside,figure,figcaption,section,article{ display:block;}
+body,html{ width:100%; height:100%;}
+a{ text-decoration:none; color:#000;}

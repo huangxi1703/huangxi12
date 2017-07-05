@@ -1,0 +1,27 @@
+*{margin:0;padding:0;}
+#container {}
+
+.clearfix:after {content: ".";display: block;height: 0;clear: both;visibility: hidden;}
+.clearfix {display: inline-block;}
+* html .clearfix { height: 1%;}
+.clearfix {display: block;}
+#page{width:300px;float:left;margin-right:50px;}
+}
+h1#logo{overflow:hidden;height:93px;padding: 25px 0;}
+h1#logo a{display:block;height:93px;}
+#container{width:350px;height:300px;}
+#container h2 {font-weight:normal;line-height:28px;}
+#container p{padding:10px 0;}
+.credit{text-align:center;padding: 20px 0 100px;font-size:10px;}
+
+
+
+
+/*-核心代码-*/
+/* demo style */
+.imgbox{position:relative;}
+.probox{width:300px; height:300px;}
+.probox img{width:300px; height:300px;vertical-align:top;}
+.showbox{display:none;position:absolute;left:350px;top:0;width:400px;height:300px;overflow:hidden;border:1px solid #ccc;}
+.showbox img{position:absolute;height:1200px;width:1200px;}
+.hoverbox{display:none;position:absolute;top:0;background:#09f;border:1px solid #09f;height:75px;width:100px;cursor:move;z-index:10;}
